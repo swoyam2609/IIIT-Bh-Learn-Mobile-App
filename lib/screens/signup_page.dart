@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class SignUpPage extends StatefulWidget {
+  const SignUpPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<SignUpPage> createState() => _SignUpPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _SignUpPageState extends State<SignUpPage> {
   TextEditingController _username = TextEditingController();
   TextEditingController _password = TextEditingController();
   String temp = "";
@@ -21,7 +21,7 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             Center(
               child: Text(
-                "Login",
+                "Sign Up",
                 style: TextStyle(fontSize: 40),
               ),
             ),
@@ -81,12 +81,12 @@ class _LoginPageState extends State<LoginPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Don't have an account, ",
+                    "Already have an account, ",
                   ),
                   GestureDetector(
-                    child: Text("Sign Up"),
+                    child: Text("Login"),
                     onTap: () {
-                      Navigator.of(context).pushReplacementNamed('/signup');
+                      Navigator.of(context).pushReplacementNamed('/login');
                     },
                   )
                 ],

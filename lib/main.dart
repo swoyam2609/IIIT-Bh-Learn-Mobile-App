@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iiit_bh_learn/screens/home.dart';
 import 'package:iiit_bh_learn/screens/login_page.dart';
+import 'package:iiit_bh_learn/screens/signup_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/splash',
       routes: {
         '/splash': (context) => HomePage(),
-        '/login': (context) => LoginPage()
+        '/login': (context) => LoginPage(),
+        '/signup' : (context) => SignUpPage()
       },
     );
   }
