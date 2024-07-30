@@ -16,8 +16,8 @@ class _SignUpPageState extends State<SignUpPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: ListView(
+          // mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Center(
               child: Text(
@@ -31,7 +31,73 @@ class _SignUpPageState extends State<SignUpPage> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
-                    "Username or Email",
+                    "Username",
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 40,
+              ),
+              child: TextField(
+                controller: _username,
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 40),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    "Full Name",
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 40,
+              ),
+              child: TextField(
+                controller: _username,
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 40),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    "Email",
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 40,
+              ),
+              child: TextField(
+                controller: _username,
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 40),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    "Phone",
                   ),
                 ],
               ),
@@ -66,6 +132,9 @@ class _SignUpPageState extends State<SignUpPage> {
                 controller: _password,
               ),
             ),
+            SizedBox(
+              height: 20,
+            ),
             ElevatedButton(
               onPressed: () {
                 setState(() {
@@ -73,8 +142,11 @@ class _SignUpPageState extends State<SignUpPage> {
                 });
               },
               child: Text(
-                "Login",
+                "Register",
               ),
+            ),
+            SizedBox(
+              height: 10,
             ),
             Center(
               child: Row(
@@ -84,7 +156,13 @@ class _SignUpPageState extends State<SignUpPage> {
                     "Already have an account, ",
                   ),
                   GestureDetector(
-                    child: Text("Login"),
+                    child: Text(
+                      "Login",
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 5, 65, 114),
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                     onTap: () {
                       Navigator.of(context).pushReplacementNamed('/login');
                     },
